@@ -3,15 +3,16 @@ import path from "path";
 
 const app = express();
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "portal/views"));
+app.use(express.static(path.join(__dirname, "views/global")));
 
-// Rota SSR
 app.get("/", (req: Request, res: Response) => {
-  res.render("portal");
+  res.sendFile(path.join(__dirname, "views/portal/index.html"));
 });
 
-// Inicia servidor
+app.get("/usuarios", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "views/user-list/index.html"));
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Server rodando em http://localhost:${PORT}`);
