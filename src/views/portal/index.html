@@ -4,15 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Minha Home Page</title>
+  <!-- <link rel="stylesheet"
+    href="views/user-list/style.css"> -->
   <link rel="stylesheet"
-    href="/style.css">
-  <link rel="stylesheet"
-    href="/src/views/global/style.css">
+    href="/portal/style.css">
 </head>
 
 <body>
-  <h1>Bem-vindo à página inicial</h1>
-  <button onclick="window.location.href='/usuarios'">Ir para Usuários</button>
+
+  <div class="container">
+    <div class="left-panel">
+      <div class="avatar"></div>
+      <p class="left-text">Faça login na sua conta</p>
+    </div>
+
+    <div class="right-panel">
+      <h1>AGROMINAS</h1>
+      <p class="subtext">Faça login para acessar o painel</p>
+
+      <form class="login-form">
+        <label for="login">Login</label>
+        <input type="text"
+          id="login"
+          name="login"
+          required>
+
+        <label for="senha">Senha</label>
+        <input type="password"
+          id="senha"
+          name="senha"
+          required>
+
+        <div class="show-password">
+          <input type="checkbox"
+            id="showPassword">
+          <label for="showPassword">Mostrar senha</label>
+        </div>
+
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 
 </html>

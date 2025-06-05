@@ -5,15 +5,18 @@ import { AppDataSource } from "./api/common/data-source";
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "views/global")));
+// Servir toda a pasta views para acesso aos assets estáticos (CSS, JS, imagens)
+app.use(express.static(path.join(__dirname, "views")));
+
 app.use(express.json());
 app.use("/usuarios", userController());
 
+// Rotas que servem os arquivos HTML
 app.get("/", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "views/portal/index.html"));
 });
 
-app.get("/usuarioss", (req: Request, res: Response) => {
+app.get("/view/usuarios", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "views/user-list/index.html"));
 });
 

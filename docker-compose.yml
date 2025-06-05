@@ -1,14 +1,14 @@
 services:
   database:
-    container_name: postgres-agrominas
-    image: postgres
+    container_name: mysql-agrominas
+    image: mysql
     ports:
-      - 5432:5432
+      - 3306:3306
     environment:
-      POSTGRES_PASSWORD: ${AGROMINAS_DATABASE_PASSWORD}
-      POSTGRES_DB: ${AGROMINAS_DATABASE_NAME}
-      POSTGRES_USER: ${AGROMINAS_DATABASE_USER}
-      PGDATA: /data/postgres
+      MYSQL_ROOT_PASSWORD: ${AGROMINAS_DATABASE_PASSWORD}
+      MYSQL_DATABASE: ${AGROMINAS_DATABASE_NAME}
+      MYSQL_USER: ${AGROMINAS_DATABASE_USER}
+      MYSQL_PASSWORD: ${AGROMINAS_DATABASE_PASSWORD}
     networks:
       - my_network
 networks:
