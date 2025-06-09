@@ -7,6 +7,7 @@ const app = express();
 
 // Servir toda a pasta views para acesso aos assets estáticos (CSS, JS, imagens)
 app.use(express.static(path.join(__dirname, "views")));
+app.use("/images", express.static(path.join(__dirname, "../images")));
 
 app.use(express.json());
 app.use("/usuarios", userController());
@@ -20,6 +21,9 @@ app.get("/view/usuarios", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "views/user-list/index.html"));
 });
 
+app.get("/view/dashboard", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "views/dashboard/index.html"));
+});
 async function main() {
   try {
     await AppDataSource.initialize();

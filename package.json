@@ -2,7 +2,8 @@
   "name": "ssr-express-ts",
   "version": "1.0.0",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc && cp -R src/views dist/"
   },
   "dependencies": {
     "dotenv": "^16.5.0",

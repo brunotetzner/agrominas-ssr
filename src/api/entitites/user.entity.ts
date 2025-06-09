@@ -8,6 +8,9 @@ export class UserEntity {
   @Column()
   name: string;
 
+  @Column()
+  email: string;
+
   @Column({ type: "date" })
   bornAt: Date;
 
