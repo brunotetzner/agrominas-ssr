@@ -18,22 +18,22 @@ jobs:
           npm install
           npm run build
 
-      - name: Copiar arquivos via SSH
-        uses: appleboy/scp-action@master
+      - name: Copiar arquivos via SCP
+        uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.WIN_EC2_HOST }}
           username: ${{ secrets.WIN_EC2_USER }}
-          password: ${{ secrets.WIN_EC2_PASS }}
+          password: ${{ secrets.WIN_EC2_SSH_KEY }}
           port: 22
           source: "."
           target: "C:/deploy/app"
 
       - name: Executar script de deploy remoto via SSH
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.WIN_EC2_HOST }}
           username: ${{ secrets.WIN_EC2_USER }}
-          password: ${{ secrets.WIN_EC2_PASS }}
+          password: ${{ secrets.WIN_EC2_SSH_KEY }}
           port: 22
           script: |
             powershell.exe "C:\deploy\app\restart-app.ps1"
