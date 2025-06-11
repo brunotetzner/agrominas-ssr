@@ -2,6 +2,10 @@ import "dotenv/config";
 import { DataSource } from "typeorm";
 import { UserEntity } from "../entitites/user.entity";
 
+console.log("Database Host:", process.env.AGROMINAS_DATABASE_HOST);
+console.log("Database User:", process.env.AGROMINAS_DATABASE_USER);
+console.log("Database Name:", process.env.AGROMINAS_DATABASE_NAME);
+
 export const AppDataSource = new DataSource({
   type: "mysql",
   host: process.env.AGROMINAS_DATABASE_HOST,
