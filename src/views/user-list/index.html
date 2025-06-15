@@ -7,28 +7,34 @@
     content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"
     href="/user-list/style.css">
+  <link rel="stylesheet"
+    href="/user-list/modalCreate.css">
   <title>Agrominas</title>
 
 </head>
 
 <body>
   <div class="sidebar">
-    <img src="logo.png"
+    <img src="/images/Rectangle 1.png"
       alt="Agrominas Logo"
       width="100">
     <h2>AGROMINAS</h2>
     <button id="dashBoard">DASHBOARD</button>
-    <button>Criar estudante</button>
+    <button id="createStudentBtn">Criar estudante</button>
     <button class="logout-btn">⏻ Deslogar</button>
   </div>
   <div class="content">
     <div class="user-list"
       id="userList"></div>
   </div>
-
-  <script src="/user-list/listUsers.js"></script>
-  <script src="/user-list/editUser.js"></script>
-  <script src="/user-list/deleteUser.js"></script>
+  <script type="module"
+    src="/user-list/listUsers.js"></script>
+  <script type="module"
+    src="/user-list/editUser.js"></script>
+  <script type="module"
+    src="/user-list/deleteUser.js"></script>
+  <script type="module"
+    src="/user-list/modalCreate.js"></script>
 </body>
 
 </html>

@@ -19,4 +19,13 @@ async function fetchAndUpdateUserCounts() {
   }
 }
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const studentsCard = document.getElementById('active-students');
+  studentsCard.addEventListener('click', () => {
+    console.log('aqiooooooooooooooooooo')
+    window.location.href = '/view/usuarios';
+  });
+});
+
 fetchAndUpdateUserCounts();

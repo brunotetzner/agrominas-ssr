@@ -1,4 +1,4 @@
-async function deleteUser(id) {
+export async function deleteUser(id) {
   if (confirm('Tem certeza que deseja excluir este usuário?')) {
     try {
       const response = await fetch(`http://localhost:3000/usuarios/${id}`, {

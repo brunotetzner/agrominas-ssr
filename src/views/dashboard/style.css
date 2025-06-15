@@ -87,3 +87,9 @@ body {
   width: 100%;
   border-radius: 8px;
 }
+#active-students {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}

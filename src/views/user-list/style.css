@@ -68,12 +68,19 @@ body {
 .user-item button {
   margin-left: 10px;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 .edit-btn {
-  background-color: #4caf50;
+  border: none;
+  background-color: #4bb5b5;
+  padding: 3 px;
+  border-radius: 5px;
 }
 
 .delete-btn {
+  border: none;
   background-color: #f44336;
+  padding: 3 px;
+  border-radius: 5px;
 }
