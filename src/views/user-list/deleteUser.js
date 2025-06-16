@@ -1,7 +1,7 @@
 export async function deleteUser(id) {
   if (confirm('Tem certeza que deseja excluir este usuário?')) {
     try {
-      const response = await fetch(`http://localhost:3000/usuarios/${id}`, {
+      const response = await fetch(`http://54.156.44.192:3000/usuarios/${id}`, {
         method: 'DELETE'
       });
       if (response.ok) {

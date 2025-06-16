@@ -1,5 +1,5 @@
 export async function updateUser(id, user) {
-  const response = await fetch(`http://localhost:3000/usuarios/${id}`, {
+  const response = await fetch(`http://54.156.44.192:3000/usuarios/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

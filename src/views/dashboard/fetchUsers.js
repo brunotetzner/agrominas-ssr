@@ -1,6 +1,6 @@
 async function fetchAndUpdateUserCounts() {
   try {
-    const response = await fetch('http://localhost:3000/usuarios');
+    const response = await fetch('http://54.156.44.192:3000:3000/usuarios');
     if (!response.ok) throw new Error('Erro ao buscar usuários');
 
     const users = await response.json();
@@ -23,7 +23,6 @@ async function fetchAndUpdateUserCounts() {
 document.addEventListener('DOMContentLoaded', () => {
   const studentsCard = document.getElementById('active-students');
   studentsCard.addEventListener('click', () => {
-    console.log('aqiooooooooooooooooooo')
     window.location.href = '/view/usuarios';
   });
 });

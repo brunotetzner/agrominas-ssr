@@ -5,7 +5,7 @@ export async function loadUsers() {
   const userList = document.getElementById('userList');
 
   try {
-    const response = await fetch('http://localhost:3000/usuarios');
+    const response = await fetch('http://54.156.44.192:3000/usuarios');
     const users = await response.json();
     userList.innerHTML = '';
 

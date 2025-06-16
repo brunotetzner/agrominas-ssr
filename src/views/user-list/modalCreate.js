@@ -47,11 +47,7 @@ export function openCreateUserModal() {
   });
 }
 
-// Aqui fora da função, mas ainda no modal.js, se o botão existir, já adiciona o listener
-  console.log('AQUIIIIIIIIIIIIIIII1')
-
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('AQUIIIIIIIIIIIIIIIII')
   const btn = document.getElementById('createStudentBtn');
   if (btn) {
     btn.addEventListener('click', () => {

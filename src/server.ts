@@ -30,7 +30,7 @@ async function main() {
     console.log("✅ Data Source inicializado com sucesso!");
 
     const PORT = 3000;
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`🚀 Server rodando em http://localhost:${PORT}`);
     });
   } catch (error) {
